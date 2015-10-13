@@ -50,6 +50,21 @@ class FirstViewController: UIViewController, UITableViewDelegate {
         
     }
     
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            
+            toDoList.removeAtIndex(indexPath.row)
+            
+            NSUserDefaults.standardUserDefaults().setObject(toDoList, forKey: "toDoList")
+            
+            toDoListTable.reloadData()
+            
+        }
+        
+    }
+    
+    
     override func viewDidAppear(animated: Bool) {
         
         toDoListTable.reloadData()
