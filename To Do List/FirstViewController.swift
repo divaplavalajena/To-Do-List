@@ -33,8 +33,6 @@ class FirstViewController: UIViewController, UITableViewDelegate {
         
     }
     
-
-    
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
@@ -46,6 +44,11 @@ class FirstViewController: UIViewController, UITableViewDelegate {
         
     }
     
+    override func viewDidAppear(animated: Bool) {
+        
+        toDoListTable.reloadData()
+        
+    }
 
 
 }
