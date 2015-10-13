@@ -18,6 +18,8 @@ class SecondViewController: UIViewController {
         
         item.text = ""
         
+        NSUserDefaults.standardUserDefaults().setObject(toDoList, forKey: "toDoList")
+        
     }
     
     
