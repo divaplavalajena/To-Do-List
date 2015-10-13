@@ -9,6 +9,18 @@
 import UIKit
 
 class SecondViewController: UIViewController {
+    
+    @IBOutlet var item: UITextField!
+    
+    @IBAction func addItem(sender: AnyObject) {
+        
+        toDoList.append(item.text!)
+        
+        item.text = ""
+        
+    }
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
